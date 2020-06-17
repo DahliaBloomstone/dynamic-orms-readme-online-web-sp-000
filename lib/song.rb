@@ -79,7 +79,7 @@ class Song
 
 #Class method to find by name
 #Dynamic because it uses the table_name class method we built that will return the table name associated with any given class.
-#Does not reference the table name explicitly.
+#Does not reference the table name explicitly
   def self.find_by_name(name)
     sql = "SELECT * FROM #{self.table_name} WHERE name = '#{name}'"
     DB[:conn].execute(sql)
