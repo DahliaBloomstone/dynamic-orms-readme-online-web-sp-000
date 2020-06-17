@@ -35,6 +35,9 @@ class Song
     attr_accessor col_name.to_sym
   end
 
+#Takes in an argument of options, which defaults to an empty hash.
+#Iterate over the options hash 
+#Use metaprogramming send method to interpolate the name of each hash key 
   def initialize(options={})
     options.each do |property, value|
       self.send("#{property}=", value)
