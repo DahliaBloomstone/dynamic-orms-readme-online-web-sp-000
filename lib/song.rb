@@ -27,7 +27,9 @@ class Song
   end
   #returns ["id", "name", "album"], which we can use to create the attr_accessors.
 
-
+#Iterate over column names class method (because of self)
+#set an attr_accessor for each one
+#column name -> symbol (to_sym)
   self.column_names.each do |col_name|
     attr_accessor col_name.to_sym
   end
