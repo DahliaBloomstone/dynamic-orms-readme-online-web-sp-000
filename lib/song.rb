@@ -3,7 +3,7 @@ require 'active_support/inflector'
 
 class Song
 
-
+#Takes song class, referenced by self, to_s turns it into a string, and downcases, then pluralizes it.
   def self.table_name
     self.to_s.downcase.pluralize
   end
@@ -59,6 +59,3 @@ class Song
   end
 
 end
-
-
-
