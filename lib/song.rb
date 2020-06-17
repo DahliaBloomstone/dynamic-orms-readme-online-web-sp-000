@@ -52,11 +52,14 @@ class Song
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM #{table_name_for_insert}")[0][0]
   end
 
-#abstracting the table name to give us the table name 
+#abstracting the table name to give us the table name
   def table_name_for_insert
     self.class.table_name
   end
 
+#Grabbing the column names of the table associated with a class:
+#column names class method have column names stored
+#Send method = invoke a method without knowing the exact name of the method
   def values_for_insert
     values = []
     self.class.column_names.each do |col_name|
