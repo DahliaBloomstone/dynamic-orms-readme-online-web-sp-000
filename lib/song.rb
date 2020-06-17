@@ -8,6 +8,7 @@ class Song
     self.to_s.downcase.pluralize
   end
 
+#Query the table for the names of its columns? Pragma line.
   def self.column_names
     DB[:conn].results_as_hash = true
 
