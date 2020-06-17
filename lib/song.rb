@@ -45,6 +45,7 @@ class Song
     end
   end
 
+#Save is an instance method, so self will refer to the instance of the class, not the class itself.
   def save
     sql = "INSERT INTO #{table_name_for_insert} (#{col_names_for_insert}) VALUES (#{values_for_insert})"
     DB[:conn].execute(sql)
