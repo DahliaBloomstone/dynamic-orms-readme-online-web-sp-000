@@ -38,7 +38,7 @@ class Song
 #Takes in an argument of options, which defaults to an empty hash.
 #Iterate over the options hash
 #Use metaprogramming send method to interpolate the name of each hash key
-#Each property has a corresponding attr_accessor
+#Each property must have a corresponding attr_accessor
   def initialize(options={})
     options.each do |property, value|
       self.send("#{property}=", value)
