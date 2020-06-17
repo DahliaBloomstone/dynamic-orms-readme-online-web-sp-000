@@ -30,6 +30,7 @@ class Song
 #Iterate over column names class method (because of self)
 #set an attr_accessor for each one
 #column name -> symbol (to_sym)
+#Metaprogramming (reader and writer method for each column name dynamically created)
   self.column_names.each do |col_name|
     attr_accessor col_name.to_sym
   end
