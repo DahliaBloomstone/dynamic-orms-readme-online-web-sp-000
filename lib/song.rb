@@ -71,6 +71,8 @@ class Song
     values.join(", ")
   end
 
+#Column names into a comma separated list contained in a string (join)
+#Need to remove id from the array of column names because id = nil
   def col_names_for_insert
     self.class.column_names.delete_if {|col| col == "id"}.join(", ")
   end
