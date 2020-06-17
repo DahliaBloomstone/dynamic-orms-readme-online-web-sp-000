@@ -62,6 +62,7 @@ class Song
 #Send method = invoke a method without knowing the exact name of the method
 #iterate ove rthe column names using send to capture the return value
 #return value = string using join
+#Abstract/flexible ways to grab each consitutent part of the SQL statement to save a record
   def values_for_insert
     values = []
     self.class.column_names.each do |col_name|
