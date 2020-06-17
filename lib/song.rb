@@ -10,6 +10,7 @@ class Song
 
 #Query the table for the names of its columns? Pragma line.
 #PRAGMA will return an array of hashes describing the table.
+#Each hash will contain information about one column.
   def self.column_names
     DB[:conn].results_as_hash = true
 
