@@ -22,9 +22,11 @@ class Song
     table_info.each do |row|
       column_names << row["name"]
     end
-    #call .compact on that to be safe and get rid of any nil values. 
+    #call .compact on that to be safe and get rid of any nil values.
     column_names.compact
   end
+  #returns ["id", "name", "album"], which we can use to create the attr_accessors.
+
 
   self.column_names.each do |col_name|
     attr_accessor col_name.to_sym
