@@ -22,6 +22,7 @@ class Song
     table_info.each do |row|
       column_names << row["name"]
     end
+    #call .compact on that to be safe and get rid of any nil values. 
     column_names.compact
   end
 
