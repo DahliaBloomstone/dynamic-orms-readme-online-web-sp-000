@@ -61,6 +61,7 @@ class Song
 #column names class method have column names stored
 #Send method = invoke a method without knowing the exact name of the method
 #iterate ove rthe column names using send to capture the return value
+#return value = string 
   def values_for_insert
     values = []
     self.class.column_names.each do |col_name|
