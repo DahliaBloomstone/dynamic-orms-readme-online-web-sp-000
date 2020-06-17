@@ -18,3 +18,10 @@ SQL
 #as an array, return it as a hash with the column names as keys.
 DB[:conn].execute(sql)
 DB[:conn].results_as_hash = true
+
+#It will return
+# ex: {"id"=>1, "name"=>"Hello", "album"=>"25", 0 => 1, 1 => "Hello", 2 => "25"}
+
+
+#and not this: DB[:conn].execute("SELECT * FROM songs LIMIT 1")
+#[[1, "Hello", "25"]]
